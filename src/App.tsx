@@ -4,6 +4,8 @@ import Home from "@/routes/home.tsx";
 import AuthLayout from "@/layout/auth-layout.tsx";
 import SignInPage from "@/routes/sign-in.tsx";
 import SignUpPage from "@/routes/sign-up.tsx";
+import ProtectedRoute from "@/layout/protected-route.tsx";
+import MainLayout from "@/layout/main-layout.tsx";
 
 const App = () => {
     return (
@@ -18,7 +20,11 @@ const App = () => {
                     <Route path="signup" element={<SignUpPage/>}/>
                 </Route>
 
+                <Route element={<ProtectedRoute>
+                    <MainLayout/>
+                </ProtectedRoute>}>
 
+                </Route>
             </Routes>
         </BrowserRouter>
     )
