@@ -4,6 +4,7 @@ import {
     SheetHeader,
     SheetTitle,
     SheetTrigger,
+    SheetDescription
 } from "@/components/ui/sheet"
 import {Menu} from "lucide-react";
 import {useAuth} from "@clerk/clerk-react";
@@ -22,7 +23,7 @@ const ToggleContainer = () => {
                 <SheetContent>
                     <SheetHeader>
                         <SheetTitle>Interview Preparation</SheetTitle>
-
+                        <SheetDescription/>
                     </SheetHeader>
                     <nav className="gap-6 flex flex-col items-start mt-6">
                         <NavigationRoute isMobile/>
